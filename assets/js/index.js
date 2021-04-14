@@ -8,7 +8,6 @@ $(document).ready(function(){
     autoplaySpeed:2000,
     autoplayTimeout: 4000,
     autoplayHoverPause:true,
-    
     responsive:{
         0:{
             items:1
@@ -135,7 +134,6 @@ list__questionBtn2.forEach(function(item){
         {
             this.nextElementSibling.classList.remove('active');
             this.querySelector('i').classList.remove('drop_up')
-
         }
         else{
             $('.list__question-answer').removeClass('active');
