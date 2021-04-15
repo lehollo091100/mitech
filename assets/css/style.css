@@ -889,7 +889,7 @@ ul,li{
 }
 .footer .footer__top a{
     color:#696969;
-    /* position: relative; */
+    position: relative;
     text-decoration: none;
 }
 .footer .footer__top a:hover{
