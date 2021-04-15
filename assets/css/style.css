@@ -1414,10 +1414,10 @@ ul,li{
 
 /* =====================13/video========================= */
 .video{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: fixed;
-    top: 0vh;
+    top: 0;
     left: 0;
     background-color:black;
     z-index: 1000000;
@@ -1596,6 +1596,10 @@ ul,li{
     .footer{
         position: relative;
     }
+    .footer .footer__bottom .footer__bottom-mitech{
+        max-width: 320px;
+        flex-direction: column;
+    }
     .header__top{
         display: none;
     }
@@ -1626,8 +1630,17 @@ ul,li{
         font-weight: 600;
         line-height: 60px;
     }
+    .banner .banner__left-icon {
+        width: 80%;
+    }
     .banner .banner__man {
         height: 90%;
+    }
+    .technology .technology__main .technology__main-bottom a p {
+        width: 100px;
+    }
+    .company__fag .company__fag-photo img {
+        max-width: 100vw;
     }
     /* .header{
         visibility:hidden;
@@ -1636,6 +1649,9 @@ ul,li{
 
     
 }
+
+
+
 @media (max-width:320px)
 {
     body{
@@ -1685,8 +1701,10 @@ ul,li{
         max-width: 320px;
         position: relative;
     }
+    
     .footer .footer__bottom .footer__bottom-mitech{
         max-width: 320px;
+        flex-direction: column;
     }
     /* technology */
     .technology .technology__main .technology__main-bottom a p {
@@ -1700,7 +1718,7 @@ ul,li{
     }
     /* .banner .banner */
     .company__fag .company__fag-photo img{
-        max-width: 320px;
+        max-width: 100vw;
         border-radius: 5px;
     }
     .experience .experience__count .experience__count-year .year__show .year__show-info {
