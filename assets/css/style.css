@@ -1554,6 +1554,9 @@ ul,li{
     } */
 }
 @media(min-width:769px)and (max-width:1200px){
+    body{
+        margin-bottom: unset;
+    }
     .search{}
     .header__top{
         display: none;
@@ -1575,6 +1578,10 @@ ul,li{
         cursor: pointer;
         margin-right: 15px;
         display: block;
+    }
+    .footer{
+        position: relative;
+        z-index: 0;
     }
 
 
