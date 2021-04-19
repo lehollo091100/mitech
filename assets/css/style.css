@@ -469,7 +469,6 @@ ul,li{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 0;
@@ -593,15 +592,7 @@ ul,li{
     /* width: 375px; */
     /* : cover; */
 }
-@media (max-width: 768px){
-.banner .banner__man img {
-    height: 50%;
-    right: 0;
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-}
+
 
 /*=====================4/ Security ===============*/
 .security{
@@ -1636,6 +1627,13 @@ ul,li{
     .banner .banner__man {
         height: 90%;
     }
+    .banner .banner__man img {
+        height: 50%;
+        right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .technology .technology__main .technology__main-bottom a p {
         width: 100px;
     }
@@ -1682,23 +1680,38 @@ ul,li{
     .testimonials__item{
         width: 100% !important
     }
+    .banner{
+        height: 600px;
+    }
     .banner .banner__man {
-        height: 50%;
-        
+        /* height: 50%; */
+        /* display: block; */
+        position:unset;
+        /* left:-100px */
+    }
+    .banner .banner__man img{
+        height: 250px;
+        width: 210px;
+        position:absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         /* left:-100px */
     }
     .banner .banner__info .banner__left-icon{
         width:90%;
     }
     .banner .banner__info .text-white{
-        font-size: 31px;
+        font-size: 21px;
     }
     .banner .banner__info .text-gold{
-        font-size: 31px;
+        font-size: 21px;
     }
-    
+    .banner .banner__info .text-software{
+        font-size: 14px;
+    }
     .footer{
-        max-width: 320px;
+        max-width: 98vw;
         position: relative;
     }
     
@@ -1725,6 +1738,15 @@ ul,li{
         font-size: 10px;
         max-width: 80px;
         letter-spacing: 0px;
+    }
+    .experience .experience__count .experience__count-year .year__show h2:first-child {
+        font-size: 140px;
+    }
+    .contact .contact__info .contact__info-phone{
+        padding-bottom: 40px;
+    }
+    .security .wrap__computing .security__computing-text {
+        height: unset;
     }
 }
 

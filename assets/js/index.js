@@ -26,7 +26,7 @@ $(document).ready(function(){
     // stagePadding: 50,
     loop:true,
     margin:30,
-    nav:true,
+    // nav:true,
     autoplay:true,
     autoplaySpeed:2000,
     autoplayTimeout: 6000,
@@ -35,6 +35,9 @@ $(document).ready(function(){
     responsive:{
         0:{
             items:1
+        },
+        320:{
+            items:2
         },
         600:{
             items:3
@@ -86,43 +89,63 @@ mobileCloseBtn.addEventListener('click',function(){
 // nut dropdown mobile menulist
 var menuSubBtn=document.querySelectorAll('.item__menu i');
 // console.log(menuSubBtn);
-for(i=0;i<menuSubBtn.length;i++)
-{
-    menuSubBtn[i].addEventListener('click',function(){
-        this.classList.toggle('drop_up');
-        var a= this.parentElement;
-        var b=a.getElementsByTagName('ul');
-        for(i=0;i<b.length;i++)
+// for(i=0;i<menuSubBtn.length;i++)
+// {
+//     menuSubBtn[i].addEventListener('click',function(){
+//         this.classList.toggle('drop_up');
+//         var a= this.parentElement;
+//         var b=a.getElementsByTagName('ul');
+//         for(i=0;i<b.length;i++)
+//         {
+//             b[i].classList.toggle('max-height350px');
+//         }
+//     })
+// }
+// var list__questionBtn2=document.querySelectorAll('.list__question-a');
+// console.log(list__questionBtn2);
+menuSubBtn.forEach(function(item){
+    item.addEventListener('click',function(){
+        // let a=this.parentElement;
+        
+        if(this.nextElementSibling.classList.contains('max-height350px'))
         {
-            b[i].classList.toggle('max-height350px');
+            this.nextElementSibling.classList.remove('max-height350px');
+            this.classList.remove('drop_up');
+        }
+        else{
+            $('.menu__sub').removeClass('max-height350px');
+            $('.item__menu i').removeClass('drop_up');
+            this.nextElementSibling.classList.add('max-height350px');
+            this.classList.add('drop_up');
         }
     })
-}
+})
+
 
 
 // nut dropdown trong answer__bottom-list list__question
 var list__questionBtn=document.querySelectorAll('.list__question i');
 
-for(i=0;i<list__questionBtn.length;i++)
-{
-    list__questionBtn[i].addEventListener('click',function(){
-        this.classList.toggle('drop_up');
-        var a= this.parentElement;
-        a.classList.toggle('open')
-        var b=a.getElementsByTagName('p');
-        for(i=0;i<b.length;i++)
-        {
-            b[i].classList.toggle('max-height350px');
-            if(b[i].style.display=='block')
-            {
-                b[i].style.display='none';
-            }
-            else{
-                b[i].style.display='block';
-            }
-        }
-    })
-}
+// for(i=0;i<list__questionBtn.length;i++)
+// {
+//     list__questionBtn[i].addEventListener('click',function(){
+//         this.classList.toggle('drop_up');
+//         var a= this.parentElement;
+//         a.classList.toggle('open')
+//         var b=a.getElementsByTagName('p');
+//         for(i=0;i<b.length;i++)
+//         {
+//             b[i].classList.toggle('max-height350px');
+//             if(b[i].style.display=='block')
+//             {
+//                 b[i].style.display='none';
+//             }
+//             else{
+//                 b[i].style.display='block';
+//             }
+//         }
+//     })
+// }
 
 var list__questionBtn2=document.querySelectorAll('.list__question-a');
 // console.log(list__questionBtn2);
@@ -143,6 +166,8 @@ list__questionBtn2.forEach(function(item){
         }
     })
 })
+
+
 
 // play video COMPANY
 vidCompanyBtn=document.querySelector('.photo__center-button div');
