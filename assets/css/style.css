@@ -209,6 +209,7 @@ ul,li{
     line-height: 1.18;
     padding: 31px;
     color: #333;
+    position: relative;
 }
 .header .header__menu-list .list__item .list__item-link:hover{
     color: var(--blue);
@@ -261,7 +262,7 @@ ul,li{
 .header .header__menu-list .list__item .nav__menu-items{
     position: absolute;
     left: 0px;
-    top: 200%;
+    top: 250%;
     width: 100%;
     min-width: 230px;
     background-color: #fff;
