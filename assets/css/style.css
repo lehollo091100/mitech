@@ -100,13 +100,19 @@ ul,li{
     transform: rotate(180deg);
     color: white!important;
 }
-
+.header__fixed{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1100;
+    width: 100%;
+}
 
 /*=====================2/ Header ===============*/
 .header{
     width: 100%;
     padding: 0px 0px;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
 }
 .header a{
@@ -985,7 +991,7 @@ ul,li{
 .mitech__social-list .list__social a:hover .list__social-name{
     opacity: 1;
     visibility: visible;
-    transform: translateY(-125%);
+    transform: translateY(-150%);
 }
 .mitech__social-list .list__social a .list__social-name p{
     position: relative;

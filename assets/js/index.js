@@ -184,3 +184,16 @@ closeVideoBtn.addEventListener('click',function(){
   
 })
 
+// header fixed
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header__menu");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("header__fixed");
+  } else {
+    header.classList.remove("header__fixed");
+  }
+}
